@@ -1,0 +1,147 @@
+body { 
+    font-size: 10px;
+}
+
+button {
+    background: #ffc600;
+    border: 0;
+    padding: 10px 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    font-size: 1.6rem;
+    display: grid;
+    grid-gap: 20px;
+}
+
+.top {
+    display: grid;
+    grid-template-areas: 
+    "hero hero cta1"
+    "hero hero cta2"
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-color: burlywood;
+    padding: 50px;
+    margin-right: 10px;
+}
+
+.cta1 {
+    grid-area: cta1;
+    background-color: #ffc600;
+    text-align: center;
+    margin-bottom: 8px;
+
+}
+
+.cta2 {
+    grid-area: cta2;
+    background-color: #ffc600;
+    text-align: center;
+}
+
+.menu ul {
+    display: grid;
+    grid-gap: 10px;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.menu a {
+    background-color: blueviolet;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+[aria-controls="menu-list"] {
+    display: none;
+}
+
+.gallery {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.galler img {
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .menu {
+        order: -1;
+    }
+    [aria-controls="menu-list"] {
+        display: block;
+    }
+
+    .menu ul {
+        max-height: 0;
+        transform: rotateX(90deg);
+        transition: all 0.5s;
+    }
+
+    [aria-expanded="true"] ~ ul {
+        display: grid;
+        max-height: 500px;
+        transform: rotateX(0);
+    }
+    
+}
+
+
+@media (max-width: 700px) {
+    .top {
+        grid-template-areas: 
+        "hero hero"
+        "cta1 cta2"
+    }
+
+    .hero {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .cta1 {
+        margin-bottom: 0px;
+    }
+
+    .cta1 {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .top {
+        grid-template-areas: 
+        "hero"
+        "cta1"
+        "cta2"
+    }
+
+    .hero {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .cta1 {
+        margin-bottom: 10px;
+        margin-right: 0px;
+    }
+
+}
