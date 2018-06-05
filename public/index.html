@@ -26,8 +26,11 @@
         </div>
         <nav class="menu">
             <button aria-expanded="true" aria-controls="menu-list"> 
-                <span class="open">O</span>
-                <span class="clos">x</span>
+                <div class="container">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
             </button>
             <ul>
                 <li>
@@ -68,7 +71,8 @@
     const navButton = document.querySelector('button[aria-expanded');
     toggleNav = ({ target }) => {
         const expanded = target.getAttribute('aria-expanded') === 'true' || false;
-        navButton.setAttribute('aria-expanded', !expanded)
+        navButton.setAttribute('aria-expanded', !expanded);
+        navButton.classList.toggle("change");
     }
         navButton.addEventListener('click', toggleNav); 
 </script>
