@@ -4,12 +4,12 @@
   "orientation" : "portrait",
 "icons": [
     {
-      "src": "/images/icons/app-icon-192x192.png",
+      "src": "/images/icons/color_wheel-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/icons/app-icon-512x512.png",
+      "src": "/images/icons/color_wheel-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
